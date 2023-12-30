@@ -37,8 +37,11 @@ Client Implementation
 You will client program client.py to connect to the server, specifying the hostname and port number of the server to connect to.
 
 • When the client program starts up, the client can issue any request (even unrecognizable ones) to the server, but is expected to issue the JOIN request immediately with the client’s username using alphanumeric characters so as to be able to use the services provided by the server.
+
 • When desired, the client will send a LIST request to the server to see who is currently subscribed to the service, but only the registered client will receive the listing (i.e., others will receive an error message with JOIN request instructions).
+
 • When desired, the client will send a MESG or BCST request to the server who will then relay that message to an individual registered client or all registered clients, respectively.
+
 • The client may voluntarily leave the service at any time by issuing the QUIT request.
 
 Your program (i.e., a server program) should run on the INET domain using SOCK_STREAM (i.e., TCP) sockets so that the server and client execute on different ECS machines at the same time. The server will accept the port number to communicate on as an argument to the server program. Your code will handle errors appropriately, such as printing an error message, disconnecting the client, or termination of the program.
