@@ -2,6 +2,7 @@ PROGRAM DESCRIPTION:
 
 In this project, you will write complete python programs to support the server and client in a client/server model using Linux stream sockets. The program will consist of a server that will implement a service (like a chat room) using a simple text protocol that clients can use via client program to message other clients on the service.
 
+
 Server Implementation
 
 • The server will set up as a server and establish a socket connection using a port number passed in as an argument to the program. For example, the server code may be executed as follows:
@@ -44,6 +45,7 @@ python3 server.py <svr_port>
 • The server will provide important status updates of messages sent and received, such as connection events and received requests, identifying the client using their socket file descriptor.
 
 • The server will support error checking across all relevant system calls and other potential issues.
+
 
 Client Implementation
 
